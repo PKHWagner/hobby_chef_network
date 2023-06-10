@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  min-height: 100%;
+  background-image: url(./img/hcn_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 25px;
+}
+
+.knives {
+  width: 134px;
+  height: 134px;
+}
+
+.window1 {
+  width: 507px;
+  background: rgba(112, 160, 204, 0.75);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 30px;
+}
