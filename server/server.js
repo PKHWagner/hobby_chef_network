@@ -11,6 +11,7 @@ app.use(cookieParser());
 require('dotenv').config();
 require('./config/mongoose.config');
 require('./routes/user.routes')(app);
+require('./routes/recipe.routes')(app);
 
 const port = 8000;
 

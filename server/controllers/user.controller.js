@@ -62,4 +62,15 @@ module.exports = {
     res.clearCookie('userToken');
     res.sendStatus(200);
   }
+
+  // // keep user logged in 
+  // loggedIn: async (req, res) => {
+  //   try {
+  //     const user = jwt.verify(req.cookies.userToken, secret);
+  //     const currentUser = await User.findOne({_id: user.id});
+  //     res.json(currentUser);
+  //   } catch (err) {
+  //     res.status(400).json({err: 'failed to get logged in'})
+  //   }
+  // }
 }
