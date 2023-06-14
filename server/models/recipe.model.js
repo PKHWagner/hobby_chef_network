@@ -16,25 +16,25 @@ const RecipeSchema = new mongoose.Schema({
 
   ingredients: {
     type: String,
-    required: [true, "Recipe Name is required!"],
-    minlength: [3, 'Recipe Name must be at least 3 characters long!']
+    required: [true, "Ingredients is required!"],
+    minlength: [3, 'Ingredients must be at least 3 characters long!']
   },
 
   prep: {
     type: String,
-    required: [true, "Recipe Name is required!"],
-    minlength: [3, 'Recipe Name must be at least 3 characters long!']
+    required: [true, "Prep is required!"],
+    minlength: [3, 'Prep must be at least 3 characters long!']
   },
 
   instructions: {
     type: String,
-    required: [true, "Recipe Name is required!"],
-    minlength: [3, 'Recipe Name must be at least 3 characters long!']
+    required: [true, "Instructions is required!"],
+    minlength: [3, 'Instructions must be at least 3 characters long!']
   },
 
   prepTime: {
     type: Number,
-    required: [true, "Recipe Name is required!"],
+    required: [true, "Prep Time is required!"],
     enum: [
       0,
       15,
@@ -54,7 +54,7 @@ const RecipeSchema = new mongoose.Schema({
 
   cookTime: {
     type: Number,
-    required: [true, "Recipe Name is required!"],
+    required: [true, "Cook Time is required!"],
     enum: [
       0,
       15,

@@ -4,12 +4,25 @@ body {
   background-image: url(./img/hcn_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
   padding: 25px;
 }
 
-.knives {
+.knife {
   width: 134px;
+  height: 134px;
+}
+
+.knives {
+  width: 75px;
+  height: 75px;
+}
+
+.cutlery {
+  height: 134px;
+}
+
+.cookbook {
   height: 134px;
 }
 
@@ -19,4 +32,25 @@ body {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   padding: 30px;
+}
+
+.window2 {
+  height: 107px;
+  background: rgba(112, 160, 204, 0.75);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.window3 {
+  width: 837px;
+  background: rgba(112, 160, 204, 0.75);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.recipeCard {
+  width: 1112px;
+  background: rgba(112, 160, 204, 0.75);
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }

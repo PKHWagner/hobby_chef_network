@@ -44,7 +44,7 @@ const SignUp = () => {
         <div className='m-5'>
           <div className='window1'>
             <h1>Hobby Chef Network</h1>
-            <img src={knives} className='knives' alt="knives crossed" />
+            <img src={knives} className='knife' alt="knives crossed" />
           </div>
         </div>
 

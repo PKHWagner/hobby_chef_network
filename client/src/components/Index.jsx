@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const index = () => {
   return (
-    <div className='App'>
+    <div>
 
       <div className='d-flex flex-column align-items-center'>
         <div className='m-5'>
