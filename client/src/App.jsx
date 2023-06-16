@@ -7,6 +7,7 @@ import SignUp from './components/user/SignUp';
 import Dashboard from './components/Dashboard';
 import RecipeCard from './components/RecipeCard';
 import NewRecipeForm from './components/NewRecipeForm';
+import EditRecipe from './components/EditRecipe';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route element={<Dashboard allRecipes={allRecipes} setAllRecipes={setAllRecipes} />} path='/dashboard' />
           <Route element={<NewRecipeForm allRecipes={allRecipes} setAllRecipes={setAllRecipes} />} path='/recipe/form' />
           <Route element={<RecipeCard />} path='/recipe/:id' />
+          <Route element={<EditRecipe />} path='/edit/:id' />
         </Routes>
       </BrowserRouter>
     </div>

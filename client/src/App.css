@@ -1,7 +1,7 @@
 body {
   text-align: center;
   min-height: 100%;
-  background-image: url(./img/hcn_background.jpg);
+  background-image: url(./img/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -32,6 +32,7 @@ body {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   padding: 30px;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.60);
 }
 
 .window2 {
@@ -39,6 +40,7 @@ body {
   background: rgba(112, 160, 204, 0.75);
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.60);
 }
 
 .window3 {
@@ -46,6 +48,8 @@ body {
   background: rgba(112, 160, 204, 0.75);
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
+  padding: 30px;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.60);
 }
 
 .recipeCard {
@@ -53,4 +57,5 @@ body {
   background: rgba(112, 160, 204, 0.75);
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, 0.60);
 }

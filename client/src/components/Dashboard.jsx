@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom'
 import knives from '../img/knives.png'
 import cutlery from '../img/cutlery.png'
-import cookbook from '../img/cookbook.png'
 
 
 const Dashboard = ({ allRecipes, setAllRecipes }) => {
@@ -46,7 +45,7 @@ const Dashboard = ({ allRecipes, setAllRecipes }) => {
           allRecipes.map((data, index) => {
             return (
               <div className='col'>
-                <div key={index} className='card h-100 bg-light bg-opacity-75 shadow p-2 mt-5'>
+                <div key={index} className='card h-100 bg-light bg-opacity-75 shadow-lg p-2 mt-5'>
                   <div className='card-body'>
                     <h5 className='card-title'><Link to={`/recipe/${data._id}`}>{data.recipeName}</Link></h5>
                     <p>{data.description}</p>
@@ -60,15 +59,12 @@ const Dashboard = ({ allRecipes, setAllRecipes }) => {
           })
         }
       </div>
-      <div className='d-flex flex-row justify-content-between align-items-baseline mt-5'>
+      <div className='d-flex flex-row justify-content-evenly align-items-baseline mt-5'>
         <div>
           <button className='btn btn-outline-light' onClick={logoutHandler}>Log Out</button>
         </div>
         <div>
-          <Link to={'/recipe/form'}>
-            <img src={cookbook} alt="" className='cookbook' />
-            <h4>Add a Recipe</h4>
-          </Link>
+          <Link to={'/recipe/form'} className='btn btn-outline-info'>Add a Recipe</Link>
         </div>
       </div>
 

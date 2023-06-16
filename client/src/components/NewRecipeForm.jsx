@@ -18,7 +18,7 @@ const NewRecipeForm = ({ allRecipes, setAllRecipes }) => {
 
   const navigate = useNavigate();
 
-  const formValidator = () => {
+  const recipeFormValidator = () => {
     let isValid = true
     if (recipeName.length < 3) {
       return false
@@ -38,9 +38,9 @@ const NewRecipeForm = ({ allRecipes, setAllRecipes }) => {
     return isValid
   }
 
-  const submitHandler = (e) => {
+  const recipeSubmitHandler = (e) => {
     e.preventDefault();
-    if (formValidator()) {
+    if (recipeFormValidator()) {
       axios.post("http://localhost:8000/api/recipes", {
         recipeName,
         description,
@@ -53,7 +53,7 @@ const NewRecipeForm = ({ allRecipes, setAllRecipes }) => {
         .then(res => {
           console.log("CHECKING RECIPES POST--->", res);
           setAllRecipes([...allRecipes, res.data]);
-          navigate(`/recipes/${res.data._id}`)
+          navigate(`/recipe/${res.data._id}`)
         })
         .catch((err) => {
           console.log("SUBMIT HANDLER NOT WORKING--->", err)
@@ -78,9 +78,82 @@ const NewRecipeForm = ({ allRecipes, setAllRecipes }) => {
         <img src={knives} className='knives' alt="knives crossed" />
       </div>
 
-      <form action="" className='window3 d-inline-flex'>
-        <div>
+      <form action="" className='window3 mx-auto mt-5' onSubmit={recipeSubmitHandler}>
 
+
+        <div className='shadow'>
+          <label htmlFor="recipeName" className='form-label'>Recipe Name:</label>
+          <input type="text" className='form-control' name='recipeName' id='recipeName' value={recipeName} onChange={(e) => setRecipeName(e.target.value)} />
+          {errors.recipeName ? <p className='text-danger'>{errors.recipeName}</p> : ""}
+        </div>
+        <div className='mt-3'>
+          <label htmlFor="description" className='form-label'>Short Description:</label>
+          <input type="text" className='form-control' name='description' id='description' value={description} onChange={(e) => setDescription(e.target.value)} />
+          {errors.description ? <p className='text-danger'>{errors.description}</p> : ""}
+        </div>
+
+
+
+        <div className=' d-inline-flex mt-3'>
+          <div>
+            <label htmlFor="ingredients" className='form-label'>Ingredients:</label>
+            <textarea rows="10" cols="40" className='form-control' name='ingredients' id='ingredients' value={ingredients} onChange={(e) => setIngredients(e.target.value)}></textarea>
+            {errors.ingredients ? <p className='text-danger'>{errors.ingredients}</p> : ""}
+          </div>
+          <div className='ms-3'>
+            <label htmlFor="prep" className='form-label'>Prep List:</label>
+            <textarea rows="10" cols="40" className='form-control' name='prep' id='prep' value={prep} onChange={(e) => setPrep(e.target.value)}></textarea>
+            {errors.prep ? <p className='text-danger'>{errors.prep}</p> : ""}
+          </div>
+        </div>
+        <div className='mt-3'>
+          <label htmlFor="instructions" className='form-label'>Instructions:</label>
+          <textarea rows="10" cols="80" className='form-control' name='instructions' id='instructions' value={instructions} onChange={(e) => setInstructions(e.target.value)}></textarea>
+          {errors.instructions ? <p className='text-danger'>{errors.instructions}</p> : ""}
+        </div>
+        <div className='d-inline-flex mt-3'>
+          <div>
+            <label htmlFor="prepTime" className='form-label'>Prep Time:</label>
+            <select className='form-control' name='prepTime' id='prepTime' value={prepTime} onChange={(e) => setPrepTime(e.target.value)}>
+              <option value="">--Please choose Minutes--</option>
+              <option value="0">0</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+              <option value="60">60</option>
+              <option value="75">75</option>
+              <option value="90">90</option>
+              <option value="105">105</option>
+              <option value="120">120</option>
+              <option value="135">135</option>
+              <option value="150">150</option>
+              <option value="165">165</option>
+              <option value="180">180</option>
+            </select>
+          </div>
+          <div className='ms-3'>
+            <label htmlFor="cookTime" className='form-label'>Cook Time:</label>
+            <select className='form-control' name='cookTime' id='cookTime' value={cookTime} onChange={(e) => setCookTime(e.target.value)}>
+              <option value="">--Please choose Minutes--</option>
+              <option value="0">0</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+              <option value="60">60</option>
+              <option value="75">75</option>
+              <option value="90">90</option>
+              <option value="105">105</option>
+              <option value="120">120</option>
+              <option value="135">135</option>
+              <option value="150">150</option>
+              <option value="165">165</option>
+              <option value="180">180</option>
+            </select>
+          </div>
+        </div>
+        <div className='mt-3'>
+          <Link className='btn btn-outline-light me-2' to={'/dashboard'}>Cancel</Link>
+          <button type='submit' className='btn btn-outline-info'>Create</button>
         </div>
 
       </form>

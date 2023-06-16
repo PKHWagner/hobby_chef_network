@@ -21,7 +21,7 @@ const RecipeCard = () => {
   }, []);
 
   const deleteHandler = (id) => {
-    axios.delete("http://localhost:8000/api/player/" + id)
+    axios.delete("http://localhost:8000/api/recipes/" + id)
       .then(res => {
         navigate('/dashboard')
       })
@@ -42,15 +42,19 @@ const RecipeCard = () => {
         <h2>{recipeDetail.recipeName}</h2>
         <h3>Ingredients:</h3>
         <p>{recipeDetail.ingredients}</p>
+        <hr />
         <h3>Prep:</h3>
         <h4>Prep Time: {recipeDetail.prepTime} min.</h4>
         <p>{recipeDetail.prep}</p>
+        <hr />
         <h3>Instructions:</h3>
         <h4>Cook Time: {recipeDetail.cookTime} min.</h4>
         <p>{recipeDetail.instructions}</p>
-        <Link className='btn btn-outline-light me-2' to={'/dashboard'}>Dashboard</Link>
-        <Link className='btn btn-outline-warning me-2' to={'/'}>Edit</Link>
-        <button className='btn btn-outline-danger' onClick={(e) => { deleteHandler(recipeDetail._id) }}>Delete</button>
+        <div className='mt-5'>
+          <Link className='btn btn-outline-light me-2' to={'/dashboard'}>Dashboard</Link>
+          <Link className='btn btn-outline-warning me-2' to={`/edit/${recipeDetail._id}`}>Edit</Link>
+          <button className='btn btn-outline-danger' onClick={(e) => { deleteHandler(recipeDetail._id) }}>Delete</button>
+        </div>
       </div>
 
     </div>
