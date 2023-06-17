@@ -41,6 +41,7 @@ const RecipeCard = () => {
       <div className='recipeCard mt-5 mx-auto p-5'>
         <h2>{recipeDetail.recipeName}</h2>
         <h3>Ingredients:</h3>
+        {/* figure out how to display like a list */}
         <p>{recipeDetail.ingredients}</p>
         <hr />
         <h3>Prep:</h3>

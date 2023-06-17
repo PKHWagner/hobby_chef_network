@@ -40,7 +40,10 @@ const Dashboard = ({ allRecipes, setAllRecipes }) => {
         <img src={knives} className='knives' alt="knives crossed" />
       </div>
 
+      {/* Put user info here with link to update user */}
+
       <div className='row row-cols-md-3 g-4 p-5'>
+        {/* This needs to become a carusel */}
         {
           allRecipes.map((data, index) => {
             return (
