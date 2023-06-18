@@ -1,0 +1,7 @@
+Hobby Chef Network
+
+My idea for an app is a Network of hoppy chefs all contributing to the same cookbook. On this app you can share your recipes with others by uploading it to a giant cookbook that everyone signed up has access to. You can like a recipe which will save it to your dashboard and will be displayed via a carousel. You will be able to communicate with others through a messenger service to get more input on a recipe or just tell everyone what great recipe you just tried.
+
+I won’t be able to get all that done in the two weeks time frame so first I will start with a login and registration page. Once logged in or registered you will be directed to your dashboard. There you can create new recipes which you will have access to via a carousel. When you click on the recipe in your carousel you will get a detailed recipe page where you can either delete or edit the recipe.
+
+I will create this app in with MERN
